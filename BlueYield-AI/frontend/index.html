@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BlueYield AI</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><div class="logo">🌊</div><div><b>BlueYield</b><span>AI</span></div></div>
+  <p class="side-note">Decision intelligence<br>for marine agriculture</p>
+  <nav>
+    <button class="nav active" data-page="dashboard">⌂ <span>Dashboard</span></button>
+    <button class="nav" data-page="analyze">⌖ <span>Analyze Site</span></button>
+    <button class="nav" data-page="recommendation">✦ <span>Recommendation</span></button>
+    <button class="nav" data-page="risk">⚠ <span>Risk & Yield</span></button>
+    <button class="nav" data-page="economics">₹ <span>Economic Potential</span></button>
+    <button class="nav" data-page="map">◉ <span>Location Intelligence</span></button>
+  </nav>
+  <div class="online"><i></i><span>AI engine online<br><b>Prototype v1.0</b></span></div>
+</aside>
+
+<main>
+<header><div><small>MARINE AGRICULTURE / DECISION LAYER</small><h1 id="title">BlueYield AI</h1></div><div><select id="languageSelect" class="language-select">
+  <option value="en">🇬🇧 English</option>
+  <option value="ta">🇮🇳 தமிழ்</option>
+  <option value="hi">🇮🇳 हिन्दी</option>
+  <option value="te">🇮🇳 తెలుగు</option>
+  <option value="kn">🇮🇳 ಕನ್ನಡ</option>
+  <option value="ml">🇮🇳 മലയാളം</option>
+</select><button class="avatar">MT</button></div></header>
+
+<section id="dashboard" class="page show">
+  <div class="hero">
+    <div>
+      <label>AI-POWERED DECISION INTELLIGENCE</label>
+      <h2>From complex marine data<br><em>to simple local decisions.</em></h2>
+      <p>What to farm. Where to farm. What risk to expect. What yield and return may be possible.</p>
+      <button class="primary" data-open="analyze">Analyze a location →</button>
+    </div>
+    <div class="orb"><div class="circle c1"></div><div class="circle c2"></div><strong>🌊<small>BLUEYIELD<br>AI</small></strong><b class="chip a">🌡 Climate</b><b class="chip b">🧂 Salinity</b><b class="chip c">🗺 GIS</b><b class="chip d">📈 Yield</b></div>
+  </div>
+  <div class="stats"><article>🌐<small>Locations analyzed</small><b>1,248</b><i>+18% this month</i></article><article>🌿<small>Activities supported</small><b>06</b><i>Seaweed · Shellfish +</i></article><article>🎯<small>Avg. suitability</small><b>82%</b><i>Demo sites</i></article><article>⚡<small>Decision time</small><b>&lt;10s</b><i>Input → decision</i></article></div>
+  <div class="cols">
+    <article class="card"><small>HOW IT WORKS</small><h3>Data → Decision</h3><div class="pipeline"><div><b>01</b><strong>Data</strong><span>Ocean · Weather · GIS</span></div><div><b>02</b><strong>Process</strong><span>Clean · spatial · temporal</span></div><div><b>03</b><strong>AI / ML</strong><span>Suitability · species</span></div><div><b>04</b><strong>Decision</strong><span>Best option + evidence</span></div><div><b>05</b><strong>Personalize</strong><span>Local language</span></div><div><b>06</b><strong>Experience</strong><span>Map + dashboard</span></div></div></article>
+    <article class="card dark"><small>DECISION SNAPSHOT</small><h3>What do you want to know?</h3><div class="snap"><button data-open="analyze">WHAT?<b>Best activity</b></button><button data-open="map">WHERE?<b>Suitable zone</b></button><button data-open="risk">WHAT RISK?<b>Environmental risk</b></button><button data-open="economics">WHAT RETURN?<b>Economic potential</b></button></div></article>
+  </div>
+</section>
+
+<section id="analyze" class="page">
+  <div class="section-head"><div><small>01 / SITE ANALYSIS</small><h2>Analyze a coastal location</h2><p>Enter available environmental conditions.</p></div></div>
+  <div class="cols formcols">
+    <article class="card"><h3>Environmental conditions</h3><div class="form">
+      <label>Temperature (°C)<input id="temperature" type="number" value="26" step=".1"></label>
+      <label>Salinity (PSU)<input id="salinity" type="number" value="34" step=".1"></label>
+      <label>Depth (m)<input id="depth" type="number" value="12"></label>
+      <label>pH<input id="ph" type="number" value="8" step=".1"></label>
+      <label>Dissolved oxygen (mg/L)<input id="oxygen" type="number" value="6.2" step=".1"></label>
+      <label>Location<input id="location" value="Demo Coastal Site"></label>
+    </div><button class="primary wide" id="run">Run BlueYield analysis →</button><p class="note">Prototype data/model only. Validate with real marine datasets before field use.</p></article>
+    <article class="card"><small>INPUT PREVIEW</small><div class="minimap"><div class="pin">●</div></div><div class="line"><span>Site</span><b id="preview">Demo Coastal Site</b></div><div class="line"><span>Completeness</span><b>5 / 5</b></div><div class="progress"><i></i></div><small>Ready for analysis</small></article>
+  </div>
+  <div id="message" class="message"></div>
+</section>
+
+<section id="recommendation" class="page">
+  <div class="section-head"><div><small>02 / RECOMMENDATION</small><h2>Personalized farming decision</h2><p>Activity + species + evidence in one view.</p></div></div>
+  <div class="recommend"><div class="score"><b id="score">82</b><small>/100</small><span>SUITABILITY</span></div><div><label>TOP RECOMMENDATION</label><h2 id="activity">Seaweed farming</h2><p id="species">Kappaphycus alvarezii</p><small>Model confidence <b id="confidence">86%</b></small></div><div class="recmeta"><small>LOCATION</small><b id="recLocation">Demo Coastal Site</b><small>DECISION</small><b>Proceed to feasibility study</b></div></div>
+  <div class="three"><article class="card"><small>WHY THIS?</small><h3>Environmental fit</h3><ul id="why"></ul></article><article class="card"><small>ALTERNATIVE</small><h3 id="alternative">Shellfish</h3><div class="alt"><b id="altScore">64%</b></div><div class="progress"><i id="altBar"></i></div><p>Consider based on market and infrastructure.</p></article><article class="card"><small>ACTION</small><h3>Next steps</h3><ol><li>Validate seasonal conditions</li><li>Check permits and zone rules</li><li>Run a pilot</li><li>Confirm market buyer</li></ol></article></div>
+</section>
+
+<section id="risk" class="page">
+  <div class="section-head"><div><small>03 / RISK & YIELD</small><h2>What risk? What yield?</h2><p>Operational indicators from the site analysis.</p></div></div>
+  <div class="cols"><article class="card"><small>ENVIRONMENTAL RISK</small><div class="risk" id="risk">LOW</div><p id="riskText">Run an analysis to update the assessment.</p><div class="bars"><div><span>Temperature</span><i style="width:78%"></i></div><div><span>Salinity</span><i style="width:84%"></i></div><div><span>Oxygen</span><i style="width:72%"></i></div><div><span>Depth</span><i style="width:68%"></i></div></div></article><article class="card center"><small>ESTIMATED YIELD</small><strong class="yield" id="yield">4.8</strong><span>tonnes / hectare / cycle</span><div class="chart"><svg viewBox="0 0 400 100" preserveAspectRatio="none"><polyline points="0,80 50,68 100,72 150,48 200,55 250,35 300,40 350,18 400,25" fill="none" stroke="currentColor" stroke-width="4"/></svg></div><small>Prototype estimate</small></article></div>
+</section>
+
+<section id="economics" class="page">
+  <div class="section-head"><div><small>04 / ECONOMIC POTENTIAL</small><h2>Turn production into opportunity</h2><p>Transparent demo estimate, not a financial guarantee.</p></div></div>
+  <article class="card econ"><div><small>DEMO ANNUAL OPPORTUNITY</small><strong id="revenue">₹4.32L</strong><p>Gross revenue / hectare / year</p></div><div class="bars"><div><span>Production</span><i id="prod"></i></div><div><span>Market value</span><i style="width:72%"></i></div><div><span>Operational fit</span><i id="oper"></i></div></div></article>
+  <div class="three"><article class="card"><small>YIELD</small><b class="big" id="ecoYield">4.8 t</b><p>per hectare / cycle</p></article><article class="card"><small>INDICATIVE PRICE</small><b class="big">₹90/kg</b><p>Editable demo assumption</p></article><article class="card"><small>POTENTIAL</small><b class="big green">Promising</b><p>Validate local market and cost data.</p></article></div>
+</section>
+
+<section id="map" class="page">
+  <div class="section-head"><div><small>05 / LOCATION INTELLIGENCE</small><h2>Explore suitable zones</h2><p>GIS-style prototype view.</p></div></div>
+  <div class="maplayout"><div class="bigmap"><div class="land"></div><div class="zone z1">82%</div><div class="zone z2">74%</div><div class="zone z3">61%</div><span class="north">N<br>↑</span><span class="scale">0 ───── 10 km</span></div><article class="card"><small>SELECTED ZONE</small><h3 id="mapLoc">Demo Coastal Site</h3><div class="line"><span>Suitability</span><b id="mapScore">82%</b></div><div class="line"><span>Best activity</span><b id="mapAct">Seaweed</b></div><div class="line"><span>Risk</span><b>Low</b></div><p class="note">Production version can connect GeoPandas, PostGIS, satellite layers and coastal GIS datasets here.</p></article></div>
+</section>
+<footer>BlueYield AI · Marine agriculture decision intelligence · Prototype</footer>
+</main>
+<script src="assets/app.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+temperature,salinity,depth,ph,dissolved_oxygen,activity,species,suitability
+24,32,10,8.1,6.5,Seaweed,Gracilaria,High
+26,34,15,8.0,6.2,Seaweed,Kappaphycus,High
+29,35,20,7.9,5.8,Shellfish,Green_Mussel,Medium
+22,30,8,8.2,7.0,Seaweed,Ulva,High
+31,36,25,7.7,5.2,Shellfish,Oyster,Medium
+20,28,5,8.3,7.2,Seaweed,Ulva,Medium
+28,34,12,8.0,6.0,Seaweed,Kappaphycus,High
+30,35,18,7.8,5.5,Shellfish,Mussel,Medium
+18,25,4,8.4,7.5,Seaweed,Ulva,Low
+27,33,10,8.1,6.4,Seaweed,Gracilaria,High
+25,33,12,8.0,6.8,Seaweed,Gracilaria,High
+27,35,14,7.9,6.1,Seaweed,Kappaphycus,High
+23,31,9,8.2,6.9,Seaweed,Ulva,High
+30,34,22,7.8,5.7,Shellfish,Oyster,Medium
+28,36,16,7.9,5.9,Shellfish,Mussel,Medium

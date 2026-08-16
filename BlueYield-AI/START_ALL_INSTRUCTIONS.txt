@@ -1,0 +1,39 @@
+BLUEYIELD AI - FULL PROJECT
+============================
+
+1. Extract this folder anywhere, for example:
+   C:\Users\YourName\Downloads\BlueYield-AI
+
+2. Open PowerShell in this folder.
+
+3. Install packages:
+   python -m pip install -r backend\requirements.txt
+
+4. Train the demo ML model:
+   python scripts\train_model.py
+
+5. Start BACKEND:
+   cd backend
+   python -m uvicorn app.main:app --reload
+
+   Keep this terminal open.
+
+6. Open a SECOND PowerShell window.
+
+7. Go back to the project root and start FRONTEND:
+   cd frontend
+   python -m http.server 5500
+
+8. Open:
+   http://localhost:5500
+
+Backend API:
+   http://127.0.0.1:8000
+
+API documentation:
+   http://127.0.0.1:8000/docs
+
+IMPORTANT:
+- Do NOT run commands from inside the old BlueYield-AI-Full-Website folder.
+- This folder itself contains backend, frontend, scripts, and data.
+- The included dataset is synthetic/demo data and is not scientifically validated.

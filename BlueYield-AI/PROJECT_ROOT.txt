@@ -1,0 +1,5 @@
+THIS IS THE BLUEYIELD AI PROJECT ROOT.
+You should see these folders next to this file:
+backend
+frontend
+scripts
